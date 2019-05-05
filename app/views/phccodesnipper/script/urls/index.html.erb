@@ -1,0 +1,57 @@
+<!-- Title System -->
+<% phc_title "Code Snippet Manager" %>
+<% phc_title_tagline "Code Snippet Index" %>
+<% phc_breadcrumb_one yield(:phc_title_tagline) %>
+<% phc_breadcrumb_two link_to "Code Snippet Index", phccodesnipper.script_posts_path %>
+<!-- Title System -->
+
+<!-- Page Bradcrumbs -->
+<ol class="breadcrumb pull-right">
+	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
+	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+</ol>
+<!-- Page Bradcrumbs -->
+
+<!-- Page Header -->
+<h1 class="page-header"><%= yield(:phc_title) %></h1>
+<!-- Page Header -->
+
+<!-- Page Content -->
+<div class="panel panel-inverse">
+	<div class="panel-heading">
+		<div class="panel-heading-btn">
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+		</div>
+		<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
+	</div>
+	<div class="panel-body">
+		<!-- Table - Article Index -->
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered">
+
+                <thead>
+                  <tr>
+                    <th>Script Url</th>
+                    <th colspan="3"></th>
+                  </tr>
+                </thead>
+        
+                <tbody>
+                <% @script_urls.each do |script_url| %>
+                  <tr>
+                    <td><%= script_url.script_url %></td>
+                    <td><%= link_to 'Show', script_url %></td>
+                    <td><%= link_to 'Edit', edit_script_url_path(script_url) %></td>
+                    <td><%= link_to 'Destroy', script_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+                </tbody>
+
+			</table>
+
+		</div>
+	</div>
+</div>
+<!-- Page Content -->
