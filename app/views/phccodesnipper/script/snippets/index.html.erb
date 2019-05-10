@@ -38,31 +38,32 @@
       <table class="table table-striped table-bordered">
 
         <thead>
-            <tr>
-                <th>Script Url</th>
-                <th colspan="3"></th>
-            </tr>
+          <tr>
+            <th>Snippet Tittle</th>
+            <th>Snippet Summary</th>
+            <th colspan="3"></th>
+          </tr>
         </thead>
-        
         <tbody>
-            <% @script_urls.each do |script_url| %>
-                <tr>
-                    <td><%= script_url.script_url %></td>
-                    <td>
-                      <div class="btn-group d-flex" role="group">
-                        <%= link_to 'Details', script_snippet_url_path(script_url.snippet, script_url), class: "btn btn-purple btn-xs" %>
-                        <%= link_to 'Update', edit_script_snippet_url_path(script_url.snippet, script_url), class: "btn btn-primary btn-xs" %>
-                        <%= link_to 'Remove', script_snippet_url_path(script_url.snippet, script_url), method: :delete, data: { confirm: 'Are you sure? This action cannot be reversed.' }, class: "btn btn-danger btn-xs" %>
-                      </div>
-                    </td>
-                </tr>
-            <% end %>
+          <% @script_snippets.each do |script_snippet| %>
+            <tr>
+              <td><%= script_snippet.snippet_tittle %></td>
+              <td><%= truncate(script_snippet.snippet_code, :length => 80) %></td>
+							<td>
+								<div class="btn-group d-flex" role="group">
+								  <%= link_to 'Details', script_snippet, class: "btn btn-purple btn-xs" %>
+								  <%= link_to 'Update', edit_script_snippet_path(script_snippet), class: "btn btn-primary btn-xs" %>
+								  <%= link_to 'Remmove', script_snippet, method: :delete, data: { confirm: 'Are you sure? This will aslo delte the snippet urls.' }, class: "btn btn-danger btn-xs" %>
+								</div>
+							</td>
+            </tr>
+          <% end %>
         </tbody>
-
+        
       </table>
-			<%= link_to phccodesnipper.new_script_snippet_url_path, class: "btn btn-primary btn-sm" do %>
+			<%= link_to phccodesnipper.new_script_snippet_path, class: "btn btn-primary btn-sm" do %>
 				<i class="fas fa-plus-circle"></i>
-				Add a New Script URL
+				Add a New Code Snippet
 			<% end %>
     </div>
     <!-- Table - Snippet Index -->

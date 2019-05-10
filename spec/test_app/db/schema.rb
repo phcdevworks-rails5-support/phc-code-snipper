@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_05_021325) do
+ActiveRecord::Schema.define(version: 2019_05_10_004505) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -59,21 +59,23 @@ ActiveRecord::Schema.define(version: 2019_05_05_021325) do
     t.index ["username"], name: "index_phcaccounts_users_on_username", unique: true
   end
 
-  create_table "phccodesnipper_script_posts", force: :cascade do |t|
-    t.string "script_tittle"
-    t.text "script_snippet"
+  create_table "phccodesnipper_script_snippets", force: :cascade do |t|
+    t.string "snippet_tittle"
+    t.text "snippet_code"
+    t.string "slug"
     t.string "user_id"
-    t.string "org_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "phccodesnipper_script_urls", force: :cascade do |t|
     t.string "script_url"
+    t.string "slug"
     t.string "user_id"
-    t.string "org_id"
+    t.integer "snippet_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["snippet_id"], name: "index_phccodesnipper_script_urls_on_snippet_id"
   end
 
 end

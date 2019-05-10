@@ -3,12 +3,12 @@
 <head>
 
   <!-- SEO System -->
-  <% phc_seo_title "Code Snipper by PHCDevworks" %>
-  <% phc_seo_description "Post Snippets of Code Online" %>
+  <% phc_seo_title "PHCCodeSnipper by PHCDevworks" %>
+  <% phc_seo_description "Application to manage and post code snippets." %>
   <!-- SEO System -->
 
   <!-- SEO and Site Description -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><%= yield(:phc_seo_title) %></title>
   <meta name="description" content="<%= yield(:phc_seo_description) %>">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
@@ -54,16 +54,10 @@
     <!-- Page Content -->
 
     <!-- Footer Content -->
-    <div id="footer" class="footer">
+    <div id="footer" class="footer mb-4">
       <%= render 'layouts/phccodesnipper/components/backend/footer/footer' %>
     </div>
     <!-- Footer Content -->
-
-    <!-- Scroll to Top -->
-    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
-    <!-- Scroll to Top -->
 
   </div>
   <!-- Page Container -->

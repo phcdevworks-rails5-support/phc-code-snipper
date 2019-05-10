@@ -1,4 +1,4 @@
 module Phccodesnipper
-  module Script::PostsHelper
+  module Script::SnippetsHelper
   end
 end

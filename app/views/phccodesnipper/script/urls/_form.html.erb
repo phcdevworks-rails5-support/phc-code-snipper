@@ -1,17 +1,17 @@
 <!-- Form - Script - Url -->
-<%= form_with(model: script_url, local: true) do |form_phc_script_url| %>
+<%= form_with(model: [ @script_snippet, @script_url], url: form_url, local: true) do |form| %>
 
   <!-- Render Validation -->
   <%= render 'phcnotifi/validations', :object => @script_url %>
   <!-- Render Validation -->
-  
+
   <div class="form-group field_with_errors">
-    <%= form_phc_script_url.label :script_url %>
-    <%= form_phc_script_url.text_field :script_url, class: 'form-control', placeholder: 'Script Url'  %>
+    <%= form.label :script_url %>
+    <%= form.text_field :script_url, class: 'form-control', placeholder: 'Script Url'  %>
   </div>
-  
+
   <div class="actions">
-    <%= form_phc_script_url.submit class: "btn btn-primary" %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 
 <% end %>

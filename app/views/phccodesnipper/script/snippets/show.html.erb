@@ -1,6 +1,6 @@
 <!-- Title System -->
 <% phc_title "Code Snippet Manager" %>
-<% phc_title_tagline "Url Details" %>
+<% phc_title_tagline "Code Snippet Details" %>
 <% phc_breadcrumb_one link_to "Code Snippet Index", phccodesnipper.script_snippets_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
@@ -35,8 +35,8 @@
       <div class="panel-body">
 
         <div class="btn-group d-flex" role="group">
-          <%= link_to 'Update', phccodesnipper.edit_script_snippet_url_path, class: "btn btn-primary" %>
-          <%= link_to 'Remove', phccodesnipper.script_snippet_urls_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+          <%= link_to 'Update', phccodesnipper.edit_script_snippet_path, class: "btn btn-primary" %>
+          <%= link_to 'Remove', phccodesnipper.script_snippet_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
         </div>		
 
       </div>
@@ -67,9 +67,9 @@
 
       <!-- Panel Body -->
       <div class="panel-body">
-        <p class="h3">Script Snippet URL</p>
+        <p class="h3"><%= @script_snippet.snippet_tittle %></p>
         <hr>
-        <pre><code><%= @script_url.script_url %></code></pre>
+        <pre><code><%= @script_snippet.snippet_code %></code></pre>
       </div>
       <!-- Panel Body -->
 

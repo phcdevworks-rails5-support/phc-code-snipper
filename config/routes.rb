@@ -5,8 +5,8 @@ Phccodesnipper::Engine.routes.draw do
 
   # Routes - Engine
   namespace :script do
-    resources :posts do
-      resources :urls
+    resources :snippets, class_name: 'Phccodesnipper::Script::Snippet' do
+      resources :urls, class_name: 'Phccodesnipper::Script::Url'
     end
   end
 

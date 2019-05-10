@@ -1,7 +1,7 @@
 <!-- Topbar - Navigation Header -->
 <div class="navbar-header">
-  <%= link_to phccodesnipper.script_posts_path, class: "navbar-brand" do %>
-    <strong>PHC</strong>ScriptSnipper
+  <%= link_to phccodesnipper.script_snippets_path, class: "navbar-brand" do %>
+    <strong>PHC</strong>CodeSnipper
   <% end %>
   <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
     <span class="icon-bar"></span>
@@ -22,10 +22,10 @@
         <span class="d-none d-md-inline"><%= current_user.firstname + ' ' + current_user.lastname  %></span> <b class="caret"></b>
       </a>
       <div class="dropdown-menu dropdown-menu-right">
-        <%= link_to phcaccountspro.edit_user_registration_path, class: "dropdown-item" do %>
+        <%= link_to phcaccounts.edit_user_registration_path, class: "dropdown-item" do %>
           <i class="fas fa-cogs"></i> Account Settings
         <% end %>
-        <%= link_to phcaccountspro.destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
+        <%= link_to phcaccounts.destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
           <i class="fas fa-sign-out-alt"></i> Logout
         <% end %>
       </div>

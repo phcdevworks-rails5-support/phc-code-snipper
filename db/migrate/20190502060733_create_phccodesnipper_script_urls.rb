@@ -4,10 +4,11 @@ class CreatePhccodesnipperScriptUrls < ActiveRecord::Migration[5.2]
     create_table :phccodesnipper_script_urls do |t|
 
       t.string :script_url
-    
+
+      t.string :slug
       t.string :user_id
-      t.string :org_id
-    
+
+      t.references :snippet
       t.timestamps
 
     end
