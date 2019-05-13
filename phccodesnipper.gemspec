@@ -37,12 +37,13 @@ Gem::Specification.new do |phc_gem_spec|
   phc_gem_spec.add_dependency 'phctheme7', '~> 3.0'
 
   # PHC Helper Dependencies
-  phc_gem_spec.add_dependency 'phccorehelpers', '~> 5.0'
+  phc_gem_spec.add_dependency 'phccorehelpers', '~> 5.2'
   phc_gem_spec.add_dependency 'phcmenus', '~> 3.0'
   phc_gem_spec.add_dependency 'phcnotifi', '~> 47.2'
   phc_gem_spec.add_dependency 'phctitleseo', '~> 46.0'
 
   # UI & URL Frontend Dependencies
+  phc_gem_spec.add_dependency 'i18n', '~> 1.6'
   phc_gem_spec.add_dependency 'friendly_id', '~> 5.2'
   phc_gem_spec.add_dependency 'gravtastic', '~> 3.2'
 

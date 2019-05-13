@@ -25,6 +25,7 @@ module Phccodesnipper
 		require 'phctitleseo'
 		
 		# UI & URL Frontend Dependencies
+		require 'i18n'
 		require 'gravtastic'
 		require 'friendly_id'
 		

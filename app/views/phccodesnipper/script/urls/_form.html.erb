@@ -1,9 +1,9 @@
 <!-- Form - Script - Url -->
 <%= form_with(model: [ @script_snippet, @script_url], url: form_url, local: true) do |form| %>
 
-  <!-- Render Validation -->
-  <%= render 'phcnotifi/validations', :object => @script_url %>
-  <!-- Render Validation -->
+	<!-- PHCNotifi Render Validation -->
+	<%= render 'phcnotifi/default/validations', :object => @script_url %>
+	<!-- PHCNotifi Render Validation -->
 
   <div class="form-group field_with_errors">
     <%= form.label :script_url %>

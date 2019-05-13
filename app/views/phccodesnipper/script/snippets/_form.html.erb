@@ -1,9 +1,9 @@
 <!-- Form - Script - Snippets -->
 <%= form_with(model: script_snippet, local: true) do |form| %>
 
-  <!-- Render Validation -->
-  <%= render 'phcnotifi/validations', :object => @script_snippet %>
-  <!-- Render Validation -->
+	<!-- PHCNotifi Render Validation -->
+	<%= render 'phcnotifi/default/validations', :object => @script_snippet %>
+	<!-- PHCNotifi Render Validation -->
   
   <div class="form-group field_with_error">
     <%= form.label :snippet_tittle, "Snippet Tittle" %>
@@ -12,7 +12,7 @@
   
   <div class="form-group field_with_error">
     <%= form.label :snippet_code, "Code Snippet" %>
-    <%= form.text_area :snippet_code, class: 'form-control', placeholder: 'Code Snippet' %>
+    <%= form.text_area :snippet_code, class: 'form-control', placeholder: 'Code Snippet', rows: '10' %>
   </div>
   
   <div class="actions">

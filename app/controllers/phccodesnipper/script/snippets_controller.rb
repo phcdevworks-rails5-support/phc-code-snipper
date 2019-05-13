@@ -2,6 +2,7 @@ require_dependency "phccodesnipper/application_controller"
 
 module Phccodesnipper
   class Script::SnippetsController < ApplicationController
+
     # Include Core Helpers, Security & Action Filters
     include Phccorehelpers::PhcpluginsHelper
     before_action :authenticate_user!
@@ -29,7 +30,7 @@ module Phccodesnipper
     def create
       @script_snippet = Script::Snippet.new(script_snippet_params)
       if @script_snippet.save
-        redirect_to @script_snippet, notice: 'Snippet was successfully created.'
+        redirect_to @script_snippet, :flash => { :success => 'Snippet was successfully created.' }
       else
         render :new
       end
@@ -38,7 +39,7 @@ module Phccodesnipper
     # UPDATE
     def update
       if @script_snippet.update(script_snippet_params)
-        redirect_to @script_snippet, notice: 'Snippet was successfully updated.'
+        redirect_to @script_snippet, :flash => { :success => 'Snippet was successfully updated.' }
       else
         render :edit
       end
@@ -47,7 +48,7 @@ module Phccodesnipper
     # DELETE
     def destroy
       @script_snippet.destroy
-      redirect_to script_snippets_url, notice: 'Snippet was successfully destroyed.'
+      redirect_to script_snippets_url, :flash => { :error => 'Snippet was successfully destroyed.' }
     end
 
     private

@@ -36,7 +36,7 @@ module Phccodesnipper
       @script_url = @script_snippet.urls.create(script_url_params)
       @script_url.user_id = current_user.id
       if @script_url.save
-        redirect_to script_snippet_urls_path, notice: 'Script url was successfully created.'
+        redirect_to script_snippet_urls_path, :flash => { :success => 'Script url was successfully created.' }
       else
         render :new
       end
@@ -46,7 +46,7 @@ module Phccodesnipper
     def update
       @script_snippet = Script::Snippet.find(params[:snippet_id])
       if @script_url.update(script_url_params)
-        redirect_to script_snippet_urls_path, notice: 'Script url was successfully updated.'
+        redirect_to script_snippet_urls_path, :flash => { :success => 'Script url was successfully updated.' }
       else
         render :edit
       end
@@ -57,7 +57,7 @@ module Phccodesnipper
       @script_snippet = Script::Snippet.find(params[:snippet_id])
       @script_url = @script_snippet.urls.find(params[:id])
       @script_url.destroy
-      redirect_to script_snippet_urls_path, notice: 'Script url was successfully destroyed.'
+      redirect_to script_snippet_urls_path, :flash => { :error => 'Script url was successfully destroyed.' }
     end
 
     private
