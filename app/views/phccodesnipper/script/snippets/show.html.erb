@@ -7,8 +7,8 @@
 
 <!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
-<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
-<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
+  <li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
+  <li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
 <!-- Page Bradcrumbs -->
 
@@ -21,39 +21,30 @@
 
   <!-- Button Area -->
   <div class="col-lg-4">
-
     <!-- Button Panel -->
     <div class="panel panel-inverse">
-
       <!-- Panel Heading -->
       <div class="panel-heading">
         <h4 class="panel-title">Options Panel</h4>
       </div>
       <!-- Panel Heading -->
-
       <!-- Panel Body -->
       <div class="panel-body">
-
         <div class="btn-group d-flex" role="group">
           <%= link_to 'Update', phccodesnipper.edit_script_snippet_path, class: "btn btn-primary" %>
           <%= link_to 'Remove', phccodesnipper.script_snippet_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-        </div>		
-
+        </div>
       </div>
       <!-- Panel Body -->
-
     </div>
     <!-- Button Panel -->
-
   </div>
   <!-- Button Area -->
 
   <!-- Main Area -->
   <div class="col-lg-8">
-
     <!-- Main Panel -->
     <div class="panel panel-inverse">
-
       <!-- Panel Heading -->
       <div class="panel-heading">
         <div class="panel-heading-btn">
@@ -64,7 +55,6 @@
         <h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
       </div>
       <!-- Panel Heading -->
-
       <!-- Panel Body -->
       <div class="panel-body">
         <p class="h3"><%= @script_snippet.snippet_tittle %></p>
@@ -72,10 +62,8 @@
         <pre><code><%= @script_snippet.snippet_code %></code></pre>
       </div>
       <!-- Panel Body -->
-
     </div>
     <!-- Main Panel -->
-
   </div>
   <!-- Main Area -->
 

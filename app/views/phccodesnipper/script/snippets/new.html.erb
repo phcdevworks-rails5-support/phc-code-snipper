@@ -1,6 +1,6 @@
 <!-- Title System -->
 <% phc_title "Code Snippet Manager" %>
-<% phc_title_tagline "New Code Snippet" %>
+<% phc_title_tagline "Create a New Code Snippet" %>
 <% phc_breadcrumb_one link_to "Code Snippet Index", phccodesnipper.script_snippets_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
@@ -18,26 +18,22 @@
 
 <!-- Page & Panel Content -->
 <div class="panel panel-inverse">
-
-  <!-- Panel Heading -->
-  <div class="panel-heading">
-    <div class="panel-heading-btn">
-      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
-      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-    </div>
-    <h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
-  </div>
-  <!-- Panel Heading -->
-
-  <!-- Panel Body -->
-  <div class="panel-body">
-    <!-- New - Form - Script - Posts -->
-    <%= render 'form', script_snippet: @script_snippet %>
-    <!-- New - Form - Script - Posts -->
-  </div>
-  <!-- Panel Body -->
-
+	<!-- Panel Heading -->
+	<div class="panel-heading">
+		<div class="panel-heading-btn">
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+		</div>
+		<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
+	</div>
+	<!-- Panel Heading -->
+	<!-- Panel Body -->
+	<div class="panel-body">
+		<!-- Form for New Script Snippet  -->
+		<%= render 'form', script_snippet: @script_snippet %>
+		<!-- Form for New Script Snippet  -->
+	</div>
+	<!-- Panel Body -->
 </div>
 <!-- Page & Panel Content -->
-

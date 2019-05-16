@@ -5,14 +5,18 @@
 	<%= render 'phcnotifi/default/validations', :object => @script_url %>
 	<!-- PHCNotifi Render Validation -->
 
-  <div class="form-group field_with_errors">
-    <%= form.label :script_url %>
-    <%= form.text_field :script_url, class: 'form-control', placeholder: 'Script Url'  %>
-  </div>
+	<!-- Form Input Fields -->
+	<div class="form-group field_with_errors">
+		<%= form.label :script_url %>
+		<%= form.text_field :script_url, class: 'form-control', placeholder: 'Script Url'  %>
+	</div>
+	<!-- Form Input Fields -->
 
-  <div class="actions">
-    <%= form.submit class: "btn btn-primary" %>
-  </div>
+	<!-- Form Submition Button -->
+	<div class="actions">
+		<%= form.submit class: "btn btn-primary" %>
+	</div>
+	<!-- For Submition Button -->
 
 <% end %>
 <!-- Form - Script - Url -->

@@ -10,7 +10,6 @@ module Phccodesnipper
     # Form Fields Validation
     validates :script_url,
       presence: true,
-      length: { minimum: 5 },
       format: {  :with => phc_domain_regx, message: "Please follow this URL format http or https://www.**********.com" }
 
   end

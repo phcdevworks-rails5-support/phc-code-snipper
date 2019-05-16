@@ -7,25 +7,25 @@ module Phccodesnipper
     include Phccorehelpers::PhcpluginsHelper
     before_action :authenticate_user!
     before_action :set_script_snippet, only: [:show, :edit, :update, :destroy]
-    
+
     # INDEX
     def index
       @script_snippets = Script::Snippet.all
     end
-    
+
     # SHOW
     def show
     end
-    
+
     # NEW
     def new
       @script_snippet = Script::Snippet.new
     end
-    
+
     # EDIT
     def edit
     end
-    
+
     # CREATE
     def create
       @script_snippet = Script::Snippet.new(script_snippet_params)
@@ -35,7 +35,7 @@ module Phccodesnipper
         render :new
       end
     end
-    
+
     # UPDATE
     def update
       if @script_snippet.update(script_snippet_params)

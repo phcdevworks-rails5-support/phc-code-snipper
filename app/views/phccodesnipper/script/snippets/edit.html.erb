@@ -18,26 +18,22 @@
 
 <!-- Page & Panel Content -->
 <div class="panel panel-inverse">
-
-  <!-- Panel Heading -->
-  <div class="panel-heading">
-    <div class="panel-heading-btn">
-      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
-      <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-    </div>
-    <h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
-  </div>
-  <!-- Panel Heading -->
-
-  <!-- Panel Body -->
-  <div class="panel-body">
-    <!-- Edit - Form - Script - Posts -->
-    <%= render 'form', script_snippet: @script_snippet %>
-    <!-- Edit - Form - Script - Posts -->
-  </div>
-  <!-- Panel Body -->
-
+	<!-- Panel Heading -->
+	<div class="panel-heading">
+		<div class="panel-heading-btn">
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+			<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+		</div>
+		<h4 class="panel-title"><%= yield(:phc_title_tagline) %></h4>
+	</div>
+	<!-- Panel Heading -->
+	<!-- Panel Body -->
+	<div class="panel-body">
+		<!-- Form to Edit Script Snippet  -->
+		<%= render 'form', script_snippet: @script_snippet %>
+		<!-- Form to Edit Script Snippet  -->
+	</div>
+	<!-- Panel Body -->
 </div>
 <!-- Page & Panel Content -->
-
