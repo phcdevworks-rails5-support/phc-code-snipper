@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_125627) do
+ActiveRecord::Schema.define(version: 2019_05_17_062862) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2019_05_16_125627) do
   end
 
   create_table "phccodesnipper_script_snippets", force: :cascade do |t|
-    t.string "snippet_tittle"
+    t.string "snippet_title"
     t.text "snippet_code"
     t.string "slug"
     t.string "user_id"

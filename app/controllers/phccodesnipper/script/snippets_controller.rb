@@ -60,7 +60,7 @@ module Phccodesnipper
 
     # Whitelist
     def script_snippet_params
-      params.require(:script_snippet).permit(:snippet_tittle, :snippet_code)
+      params.require(:script_snippet).permit(:snippet_title, :snippet_code)
     end
 
   end

@@ -35,7 +35,7 @@
       <table class="table table-striped table-bordered">
         <thead>
           <tr>
-            <th>Snippet Tittle</th>
+            <th>Snippet Title</th>
             <th>Snippet Summary</th>
             <th></th>
           </tr>
@@ -43,7 +43,7 @@
         <tbody>
           <% @script_snippets.each do |script_snippet| %>
             <tr>
-              <td><%= script_snippet.snippet_tittle %></td>
+              <td><%= script_snippet.snippet_title %></td>
               <td><%= truncate(script_snippet.snippet_code, :length => 80) %></td>
               <td>
                 <div class="btn-group d-flex" role="group">

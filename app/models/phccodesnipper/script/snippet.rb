@@ -11,7 +11,7 @@ module Phccodesnipper
     has_many :urls, class_name: 'Phccodesnipper::Script::Url'
 
     # Form Fields Validation
-    validates :snippet_tittle,
+    validates :snippet_title,
       presence: true
 
     validates :snippet_code,
@@ -22,7 +22,7 @@ module Phccodesnipper
 
     def phc_nice_url_slug
       [
-        [:snippet_tittle]
+        [:snippet_title]
       ]
     end
 
